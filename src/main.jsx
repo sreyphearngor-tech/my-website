@@ -1,48 +1,38 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { ProductContextProvider } from "./context/ProductContext";
 
-import Products from "./pages/Products";
-import Cart from "./pages/Cart";
-import Success from "./pages/Success";
 import App from './App.jsx';
-
-import "./index.css"; // <-- Tailwind imported here
 import Home from "./pages/Home";
-import LoginSignup from "./pages/LoginSignup";
-import NewLetter from "./components/NewLetter/NewLetter";
+import Products from "./pages/Products";
 import ProductsByBrand from "./pages/ProductsByBrand";
 import DetailProduct from "./Router/DetailProduct";
-import Contact from "./components/Contact.jsx";
+import Cart from "./pages/Cart";
+import LoginSignup from "./pages/LoginSignup";
+import NewLetter from "./components/NewLetter/NewLetter";
+import Success from "./pages/Success";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-       { index: true, element: <Home/> },
-    
-     { path: ":category", element: <Products /> },
-     { path: ":category/:subcategory", element: <Products /> },
-     { path: "products/:brand", element: <ProductsByBrand /> }, 
-      { path: "detailproduct/:id",element: <DetailProduct />},
-      
-     { path: "cart", element: <Cart /> },
-     { path: "login", element: <LoginSignup/> },
-     { path: "newletter", element: <NewLetter/> },
-
-
-      { path: "success", element: <Success /> },
-    ],
-  },
-]);
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ProductContextProvider>
-      <RouterProvider router={router} />
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<Home />} />
+            <Route path=":category" element={<Products />} />
+            <Route path=":category/:subcategory" element={<Products />} />
+            <Route path="products/:brand" element={<ProductsByBrand />} />
+            <Route path="detailproduct/:id" element={<DetailProduct />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="login" element={<LoginSignup />} />
+            <Route path="newletter" element={<NewLetter />} />
+            <Route path="success" element={<Success />} />
+          </Route>
+        </Routes>
+      </HashRouter>
     </ProductContextProvider>
   </React.StrictMode>
 );
