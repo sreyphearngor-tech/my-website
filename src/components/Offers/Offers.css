@@ -1,0 +1,35 @@
+ .offer-right img  {
+  width: 100%;
+  height:auto;
+
+margin-top: 250px;
+  object-fit: cover;
+ 
+   
+}
+ .offer-right .btn{
+  margin-top: -97px;
+  padding: 6px 10px;
+  left:0;
+  right:0;
+  border-radius: 30px;
+margin-left: 690px;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: blue;
+  font-size: 18px;
+ }
+  .offer-right .btn:hover{
+    background-color: cornflowerblue;
+  }
+
+/* Responsive */
+@media (max-width: 768px) {
+
+
+
+  .offer-right img {
+    width: 260px;
+  }
+}

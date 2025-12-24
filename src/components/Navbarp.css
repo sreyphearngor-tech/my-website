@@ -1,0 +1,190 @@
+/* ================= NAVBAR ================= */
+.Navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.Navbar-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.Navbar-logo h1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Remove unwanted space left-right */
+.w-full {
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Nav Links Hover */
+ul li a {
+  transition: 0.3s;
+}
+
+
+
+/* Search Input Style */
+.search-box input {
+  border: none;
+  outline: none;
+  width: 160px;
+  padding: 5px 8px;
+  font-size: 14px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #0044ff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-box .search-icon {
+  padding: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: .3s;
+}
+
+.search-box .search-icon:hover {
+  color: #ff0000;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #0044ff;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  color: #fff;
+  padding: 26px 58px;
+
+  transition: .3s;
+}
+
+.Navbar-logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* container whole navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* -------- Login + Cart Center -------- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* space between */
+}
+
+/* Login Button */
+.navbar-login-btn {
+  background: #2563eb;
+  color: white;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar-login-btn:hover {
+  background: #1e40af;
+}
+
+/* Cart Icon */
+.navbar-cart {
+  position: relative;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.navbar-cart span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* ---------------- Responsive ------------------ */
+@media (max-width: 768px) {
+  .navbar-right {
+    gap: 20px;
+  }
+  .navbar-login-btn {
+    font-size: 14px;
+    padding: 5px 14px;
+  }
+  .navbar-cart {
+    font-size: 22px;
+  }
+}
+
+
+/* Cart Icon */
+.cart-icon {
+  font-size: 26px;
+  color: #000;
+  margin-left: -100px;
+}
+
+/* Responsive for phone */
+@media (max-width: 768px) {
+  .Navbar-logo h1 {
+    font-size: 14px;
+  }
+
+  ul {
+    gap: 10px !important;
+  }
+
+  ul li a {
+    font-size: 14px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 4px 14px;
+    margin-left: 200px;
+  }
+}
+.Navbar-logo img {
+  transition: 0.3s;
+}
+
+.Navbar-logo img:hover {
+  transform: scale(1.07);
+}
+

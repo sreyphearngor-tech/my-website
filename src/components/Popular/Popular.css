@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.popular {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  height:500px;
+  padding: 40px 20px;
+}
+
+/* Title */
+.popular h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* =========================
+   GRID (like NewCollection)
+   ========================= */
+.popular-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobile default */
+  gap: 20px;
+  padding: 30px 0;
+  width: 100%;
+}
+
+/* Tablet (≥640px) */
+@media (min-width: 640px) {
+  .popular-item {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop (≥1024px) */
+@media (min-width: 1024px) {
+  .popular-item {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =========================
+   ITEM CARD
+   ========================= */
+.item {
+  background: #a01c1ca8;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Image */
+.item img {
+  width: 100%;
+  height: 460px;
+  display: flex;
+  object-fit: cover;
+  border-radius: 12px;
+  padding: 10px;
+  display: block;
+}
+
+/* Responsive image height */
+@media (min-width: 640px) {
+  .item img {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .item img {
+    height: 360px;
+  }
+}
+
+/* Text */
+.item p {
+  margin: 6px 15px;
+}
+
+/* Price */
+.item-price {
+  display: flex;
+  gap: 10px;
+  margin: 10px 15px;
+  font-size: 18px;
+}
+
+.item-new {
+  color: #444;
+  font-weight: 600;
+}
+
+.item-old {
+  text-decoration: line-through;
+  color: #999;
+  font-weight: 600;
+}

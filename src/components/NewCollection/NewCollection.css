@@ -1,0 +1,27 @@
+
+.para .old-collection{
+  text-decoration: line-through;
+  color: red;
+  border:2px;
+  background-color: aqua;
+  padding: 20px 10px;
+}
+
+  .card:hover{
+    transform: scale(1.05);
+    transform: 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card{
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+.card img{
+  width:100%;
+  height:600px;
+  display: flex;
+}

@@ -1,0 +1,100 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+.hero{
+
+    height:auto;
+    margin-top:60px;
+
+}
+.hero img{
+    width: 100%;
+       height:779px;
+         display: flex;
+         object-fit: cover;
+         max-height: 200px;
+ 
+}
+.hero {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Arrow buttons */
+.btn-left,
+.btn-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(109, 159, 216, 0.7);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn-left img,
+.btn-right img {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-left {
+  left: 15px;
+}
+
+.btn-right {
+  right: 15px;
+}
+
+.btn-left:hover,
+.btn-right:hover {
+  background: rgb(91, 17, 210);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.hero-caption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    color: black;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.btn-icons{
+  gap:15px;
+  margin-top: -12px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(243, 241, 241);
+  box-shadow: 10px 5px 5px rgb(214, 75, 75);
+
+
+
+
+  display: flex;
+  font-size: 21px;
+
+}
+
+.btn-icons:hover{
+  cursor:pointer;
+  background-color: rgb(34, 218, 83);
+  transform: scale(1.05);
+  color:black;
+}
+.btn-icons:active{
+  transform:scale(0.95);
+}

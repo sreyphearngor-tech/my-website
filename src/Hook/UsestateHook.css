@@ -1,0 +1,25 @@
+.box-frm{
+    width:350px;
+    height:285px;
+    border:1px solid black;
+
+}
+
+.box-prf{
+
+    width:350px;
+
+
+
+
+    height:285px;
+    background-color: aliceblue;
+    & img{
+        height:65%;
+
+    }
+    &p{
+        line-height:25px;
+    
+    }
+}
